@@ -58,9 +58,10 @@ $python3 main.py [--mode MODE]
                  [--tensorboard_dir TENSORBOARD_DIR]
 ```
 Usage:
+
 ```--mode```Mode to run (Train/Eval) (default = train).
 
-```--model_name```: Model to be evaluation in Eval mode (default = None).
+```--model_name```: Model to be evaluation in Eval mode (default = Lastest trained model).
 
 ```--learning_rate```: Initial learning rate (default = 0.001).
 
