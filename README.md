@@ -25,7 +25,6 @@ The aim of the project is a simple classifier using deep learning techniques wit
 - [network.py](network.py) : Model module. Define deeplearning networks' architecture.
 
 Other files:
-- [RAW dataset](assignment_httm_data) : Dataset in MATLAB .mat format
 - [README.md](README.md) : This file, obiviously :)
 
 ##### b. Models

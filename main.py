@@ -75,18 +75,26 @@ def main(args):
         model_save_path = "./Model/{}.tfl".format(run_id)
         model.save(model_save_path)
         print("Model saved at {}".format(model_save_path))
- 
+        file = open("./Model/lastest_run", 'w')
+        file.write(run_id)
+        file.close()
     else:
         #Evaluation(Test)
-        if (args.model_name):
-            print('Testing...')
-            model_load_path = "./Model/{}.tfl".format(args.model_name)
-            print('Model loaded at {}'.format(args.model_name))
-            model.load(model_load_path)
-            score = model.evaluate(test_X, test_Y)
-            print('Test accuracy: {:0.4f}'.format(score[0]))
-        else:
-              print('Please input model name!')
+        model_name = args.model_name
+        if (not args.model_name):
+            try:
+                file = open("./Model/lastest_run", 'r')
+            except e:
+                print('Lastest run not found!')
+                return
+            model_name = file.read()
+            file.close()
+        print('Testing...')
+        model_load_path = "./Model/{}.tfl".format(args.model_name)
+        print('Model loaded at {}'.format(args.model_name))
+        model.load(model_load_path)
+        score = model.evaluate(test_X, test_Y)
+        print('Test accuracy: {:0.4f}'.format(score[0]))
     
 #Add Arguments parser
 if __name__ == '__main__':
@@ -102,7 +110,7 @@ if __name__ == '__main__':
     parser.add_argument(
       '--model_name',
       default=default_params['model_name'],
-      help='Model to be evaluation in Eval mode (default = {}).'.format(default_params['model_name'])
+      help='Model to be evaluation in Eval mode (default: Lastest model)"
       )
     
     parser.add_argument(
