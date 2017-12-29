@@ -57,20 +57,20 @@ $python3 main.py [--mode MODE]
                  [--tensorboard_dir TENSORBOARD_DIR]
 ```
 Usage:
-```--mode```Mode to run (Train/Eval) (default = train).
-```--model_name```: Model to be evaluation in Eval mode (default = None).
-```--learning_rate```: Initial learning rate (default = 0.001).
-```--num_epochs``` : Number of training epochs (default = 25).
-```--model```Model to use (CNN1 - Simple/ CNN2 - Complex, DNN) (default = CNN1).
-``` --batch_size``` : Batch size (default = 128).
-```--train_path``` : Path to training dataset (default = ```./assignment_httm_data/train_32x32.mat```).
-```--test_path``` : Path to test dataset (default = ```./assignment_httm_data/test_32x32.mat```).
-```--extra_path``` : Path to extra test dataset (default = ```./assignment_httm_data/extra_32x32.mat```).
-```--load_extra``` : Use the extra dataset (default = False).
-```--validation_percentage``` : Validation percentage from original training set (default = 0.1).
-```--data_shuffle``` : Shuffle the data when training (default = True).
-```--name``` : Run name (default = current datetime)
-```--tensorboard_dir``` :Tensorboard log directory (default = ```~/tensorboard_runs```).
+-```--mode```Mode to run (Train/Eval) (default = train).
+-```--model_name```: Model to be evaluation in Eval mode (default = None).
+-```--learning_rate```: Initial learning rate (default = 0.001).
+-```--num_epochs``` : Number of training epochs (default = 25).
+-```--model```Model to use (CNN1 - Simple/ CNN2 - Complex, DNN) (default = CNN1).
+-``` --batch_size``` : Batch size (default = 128).
+-```--train_path``` : Path to training dataset (default = ```./assignment_httm_data/train_32x32.mat```).
+-```--test_path``` : Path to test dataset (default = ```./assignment_httm_data/test_32x32.mat```).
+-```--extra_path``` : Path to extra test dataset (default = ```./assignment_httm_data/extra_32x32.mat```).
+-```--load_extra``` : Use the extra dataset (default = False).
+-```--validation_percentage``` : Validation percentage from original training set (default = 0.1).
+-```--data_shuffle``` : Shuffle the data when training (default = True).
+-```--name``` : Run name (default = current datetime)
+-```--tensorboard_dir``` :Tensorboard log directory (default = ```~/tensorboard_runs```).
 
 ### 5. Result
 ##### Database:
