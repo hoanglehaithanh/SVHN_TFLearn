@@ -25,8 +25,9 @@ The aim of the project is a simple classifier using deep learning techniques wit
 - [network.py](network.py) : Model module. Define deeplearning networks' architecture.
 
 Other files:
-- [RAW dataset](assignment_httm_data) : Dataset in MATLAB .mat format
 - [README.md](README.md) : This file, obiviously :)
+
+Note: Because the size of the dataset is big, I don't include dataset files here (You can see this in .gitignore file). If you want to run this project, change the path of .mat files to your local files in main.py or create a new folder named "*assignment_httm_data/*" and put .mat files into there.
 
 ##### b. Models
 1. Basic Convolutional Neural Network
