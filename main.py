@@ -110,7 +110,7 @@ if __name__ == '__main__':
     parser.add_argument(
       '--model_name',
       default=default_params['model_name'],
-      help='Model to be evaluation in Eval mode (default: Lastest model)"
+      help='Model to be evaluation in Eval mode (default: Lastest model)'
       )
     
     parser.add_argument(

@@ -1,2 +1,11 @@
 #Ignore dataset
 assignment_httm_data/
+
+#Ignore model folder
+Model/
+
+#Ignore Python cache
+ __pycache__/
+
+#Igonore compiled python files
+*.pyc
