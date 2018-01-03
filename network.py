@@ -79,17 +79,24 @@ class DNN:
     
     def __init__(self, learning_rate):
         input_layer = tflearn.input_data(shape=[None, 32,32,3])
-        dense1 = tflearn.fully_connected(input_layer, 128, activation='relu')
-        dropout1 = tflearn.dropout(dense1, 0.25)
+        dense1 = tflearn.fully_connected(input_layer, 32, activation='relu')
+        dropout1 = tflearn.dropout(dense1, 0.5)
         
-        dense2 = tflearn.fully_connected(dropout1, 256, activation='relu')
+        dense2 = tflearn.fully_connected(dropout1, 64, activation='relu')
         dropout2 = tflearn.dropout(dense2, 0.25)
-     
-        dense3 = tflearn.fully_connected(dropout2, 512, activation='relu')       
-        softmax = tflearn.fully_connected(dense3, 10, activation='relu')
         
-        sgd = tflearn.SGD(learning_rate= learning_rate, lr_decay=0.96, decay_step=1000)
-        network = tflearn.regression(softmax, optimizer=sgd,
+        dense3 = tflearn.fully_connected(dropout2, 128, activation='relu')
+        dropout3 = tflearn.dropout(dense3, 0.5)
+        
+        dense4 = tflearn.fully_connected(dropout3, 256, activation='relu')
+        dropout4 = tflearn.dropout(dense4, 0.5)
+     
+        dense5 = tflearn.fully_connected(dropout4, 512, activation='relu')      
+        
+        softmax = tflearn.fully_connected(dense5, 10, activation='softmax')
+        
+        sgd = tflearn.SGD(learning_rate= learning_rate, lr_decay=0.95, decay_step=1000)
+        network = tflearn.regression(softmax, optimizer= sgd, learning_rate=learning_rate,
                                      loss='categorical_crossentropy')
         self.network = network
         
