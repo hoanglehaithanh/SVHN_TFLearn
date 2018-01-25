@@ -69,7 +69,7 @@ Usage:
 
 ```--model```Model to use (CNN1 - Simple/ CNN2 - Complex, DNN) (default = CNN1).
 
-``` --batch_size``` : Batch size (default = 128).
+```--batch_size``` : Batch size (default = 128).
 
 ```--train_path``` : Path to training dataset (default = ```./assignment_httm_data/train_32x32.mat```).
 
@@ -88,9 +88,34 @@ Usage:
 ```--tensorboard_dir``` :Tensorboard log directory (default = ```~/tensorboard_runs```).
 
 ### 5. Result
-##### Database:
-##### Result of the assignment (default parameters):
-Updating...
+![CNN1 Training Time](/images/cnn1_time.png)
+
+
+![CNN1 Test Accuracy](/images/cnn1_accuracy.png)
+
+
+![CNN1 Graphs](/images/cnn1_diagram.png)
+
+
+![CNN2 Training Time](/images/cnn2_time.png)
+
+
+![CNN2 Test Accuracy](/images/cnn2_accuracy.jpg)
+
+
+![CNN2 Graphs](/images/cnn2_diagram.png)
+
+
+
+
+![DNN Training Time](/images/dnn_time.png)
+
+
+![DNN Test Accuracy](/images/dnn_accuracy.png)
+
+
+![DNN Graphs](/images/dnn_diagram.png)
+
 ### 6. Future development
 - More models (RNN, SVM,...)
 - Cleaner code
