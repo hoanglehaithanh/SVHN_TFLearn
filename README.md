@@ -88,6 +88,8 @@ Usage:
 ```--tensorboard_dir``` :Tensorboard log directory (default = ```~/tensorboard_runs```).
 
 ### 5. Result
+
+CNN1:
 ![CNN1 Training Time](/images/cnn1_time.png)
 
 
@@ -97,6 +99,7 @@ Usage:
 ![CNN1 Graphs](/images/cnn1_diagram.png)
 
 
+CNN2:
 ![CNN2 Training Time](/images/cnn2_time.png)
 
 
@@ -106,8 +109,7 @@ Usage:
 ![CNN2 Graphs](/images/cnn2_diagram.png)
 
 
-
-
+DNN:
 ![DNN Training Time](/images/dnn_time.png)
 
 
